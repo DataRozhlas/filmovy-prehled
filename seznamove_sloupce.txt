@@ -50,14 +50,16 @@ Země původu
 Zpívá
 Zvuk
 Zvukový systém/formát
-ŽánrDistribuce
+Žánr
+Distribuce
 Nositelé copyrightu
 Partner
 S podporou
 Triky
 Vizuální efekty
 Výrobce
-Zvláštní efektyDirigent
+Zvláštní efekty
+Dirigent
 Hudba k písni
 Nahrál
 Písně
