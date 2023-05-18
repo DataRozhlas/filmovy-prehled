@@ -1,5 +1,5 @@
 Scraping a analýza dat o 125 letech českého filmu pro články na serveru iROZHLAS.cz. Data pocházejí z _[Filmového přehledu](https://filmovyprehled.cz/)_, autoritativní databáze spravované Národním filmovým archivem.
 
-Výsledky by mělo jít reprodukovat spuštěním notebooků v číselném pořadí, pajplajna jde od scrapování přes čištění po exploraci a analýzu. S ohledem na servery _Filmového přehledu_ však radím to takto nedělat. Doporučený postup: ručně rozbalit ZIPy ve složce DATA a začít až notebooky s explorací od čísla 100 výš.
+Výsledky by mělo jít reprodukovat spuštěním notebooků v číselném pořadí, pajplajna jde od scrapování přes čištění po exploraci a analýzu. S ohledem na servery _Filmového přehledu_ však radím to takto nedělat. Doporučený postup: ručně rozbalit ZIPy ve složce DATA a začít až notebooky s explorací od čísla 100 výš. (Z tohoto pravidla se vymyká notebook č. 132, tam je zapotřebí API klíč GPT a to dává nedeterministické odpovědi, navíc pro velmi partikulární otázky, takže ten je radno přeskočit.)
 
-Aktuální to-do: Překopírovat opakované funkce do SRC a do sešitů je odtud importovat.
+Herectvo lze analyzovat dvěma způsoby. Méně preferovaný, zato jednodušší je loadnout `herectvo.json`, kde jsou však jen herci a herečky s vlastním ID a profilem na Filmovém přehledu. Správnější, zato v mnoha případech komplikovanější je nahrát `filmy.json` a pracovat se sloupcem `Hrají`, protože v něm jsou i lidé, kteří se nedočkali vlastního profilu v databázi Filmového přehledu – rozdíl v počtu řádků je zhruba 12k:16k.
