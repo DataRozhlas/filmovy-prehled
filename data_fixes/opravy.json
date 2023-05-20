@@ -1,47 +1,35 @@
 {
-    "jmena": {
-
-        "Bolek Polívka (1556)": "Boleslav Polívka (1556)",
-        "Rudolf Hrušínský st. (73846)": "Rudolf Hrušínský nejst. (73846)",
-        "Rudolf Hrušínský (4842)": "Rudolf Hrušínský st. (4842)",
-        "Rudolf Hrušínský (2988)": "Rudolf Hrušínský ml. (2988)",
-        "Rudolf Hrušínský ml. (4843)": "Rudolf Hrušínský ml. (2988)"
-
-    },
-
     "data_narozeni": {
-
-        "Eva Pecková (34563)": "",
         "Adam Klemens (1779)": "14.01.1967",
         "Dal Stivens (110800)": "",
+        "Eva Pecková (34563)": "",
         "Jaroslav Frič (129945)": ""
-
     },
-
     "exil": [
-        
-        "Taking Off (401352)",
-        "Viděno osmi (401497)",
-        "Přelet nad kukaččím hnízdem (401353)",
-        "Vlasy (401378)",
-        "Ragtime (401385)",
         "Amadeus (401253)",
-        "Valmont (401384)",
+        "Casino Royale (47114)",
+        "Goyovy přízraky (54226)",
         "Lid versus Larry Flynt (401455)",
         "Muž na Měsíci (401456)",
+        "Přelet nad kukaččím hnízdem (401353)",
         "Rabín, kněz a krásná blondýna (401629)",
-        "Goyovy přízraky (54226)",
-        "Casino Royale (47114)"
-    
+        "Ragtime (401385)",
+        "Taking Off (401352)",
+        "Valmont (401384)",
+        "Viděno osmi (401497)",
+        "Vlasy (401378)"
     ],
-
+    "jmena": {
+        "Bolek Polívka (1556)": "Boleslav Polívka (1556)",
+        "Rudolf Hrušínský (2988)": "Rudolf Hrušínský ml. (2988)",
+        "Rudolf Hrušínský (4842)": "Rudolf Hrušínský st. (4842)",
+        "Rudolf Hrušínský ml. (4843)": "Rudolf Hrušínský ml. (2988)",
+        "Rudolf Hrušínský st. (73846)": "Rudolf Hrušínský nejst. (73846)"
+    },
     "nejsou_lide": [
-
-        "IPON – agentura filmových kaskadérů (94376)",
-        "Agentura filmových kaskadérů – FILMKA (92420)",
+        "AFIT (127949)",
         "AVAS s. r. o. (94116)",
-        "AFIT (127949)"
-
+        "Agentura filmových kaskadérů – FILMKA (92420)",
+        "IPON – agentura filmových kaskadérů (94376)"
     ]
-
 }
