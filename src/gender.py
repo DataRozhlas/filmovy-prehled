@@ -1,25 +1,22 @@
-def gender(jmeno):
+def gender(jmeno, zeny, nelide):
     
-    import os
-    import json
-    
-    with open(os.path.join("data_fixes", "zeny.json"), encoding="utf-8") as zeny:
-        zeny = json.loads(zeny.read())
+    gend = None
 
     if jmeno:
         if isinstance(jmeno, str):
+            if jmeno in nelide:
+                pass
             if ("(") in jmeno:
                 jmeno = jmeno.split("(")[0].strip()
             if jmeno[-1:] == "á":
-                gender = "žena"
+                gend = "žena"
             elif jmeno[-3:] == "ova":
-                gender = "žena"
+                gend = "žena"
             elif jmeno in zeny:
-                gender = "žena"
+                gend = "žena"
             else:
-                gender = "muž"
+                gend = "muž"
         else:
-            gender = None
-    else:
-        gender = None
-    return gender
+            gend = None
+
+    return gend
