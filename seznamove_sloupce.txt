@@ -3,9 +3,17 @@ Animační technika
 Architekt
 Asistent kamery
 Asistent režie
+Asistent střihu
+Asistent vedoucího produkce
+Asistent vedoucího výroby
+Asistent zvuku
+Assistent architekta
 Ateliéry
 Autor komentáře
+Autor projektu
 Barva
+České podtitulky
+Dialogy české verze
 Distribuční nosič
 Dramaturg
 Druhá kamera
@@ -15,6 +23,7 @@ Kamera
 Kaskadéři
 Koordinátor kaskadérů
 Koproducent
+Kostýmy
 Masky
 Mezititulky
 Mluveno
@@ -31,7 +40,9 @@ Produkce
 Předloha
 Původní filmový námět
 Režie
+Režie české verze
 Scénář
+Skript
 Spolupráce
 Střih
 Technický scénář

@@ -20,6 +20,7 @@
         "Druhá kamera",
         "Hrají",
         "Hudba k písni",
+        "Hudba, text a zpěv písně",
         "Hudební režie",
         "Kamera",
         "Kaskadéři",
@@ -59,5 +60,9 @@
         "Zpívá",
         "Zvláštní efekty",
         "Zvuk"
-    ]
+    ],
+
+    "oskari": ["Obchod na korze (396649)", "Ostře sledované vlaky (396694)", "Kolja (9013)"],
+
+    "oskarianominace": ["Obchod na korze (396649)","Lásky jedné plavovlásky (396651)","Ostře sledované vlaky (396694)","Hoří, má panenko (396750)","Kolja (9013)","Vesničko má středisková (397480)","Obecná škola (397700)","Želary (13452)"]
 }
