@@ -22,7 +22,7 @@ def vycisti(dataframe, opravy):
     filmu_po = dataframe.shape[0]
 
     print(
-        f"""{datetime.now().strftime("%Y/%m/%d %H:%M:%S")} z {filmu_pred} filmů odstraněno {filmu_pred - filmu_po}. Aktuální dataframe obsahuje {filmu_po} filmů."""
+        f"""{datetime.now().strftime("%Y/%m/%d %H:%M:%S")} z {filmu_pred} řádků odstraněno {filmu_pred - filmu_po}. Aktuální dataframe má {filmu_po} řádků."""
     )
 
     return dataframe
