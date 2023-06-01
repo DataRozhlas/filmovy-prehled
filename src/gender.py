@@ -1,5 +1,4 @@
 def gender(jmeno, zeny, nelide):
-    
     gend = None
 
     zkratky = [" ml.", " nejml.", " st.", " nejst.", "PhD."]
