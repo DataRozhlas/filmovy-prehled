@@ -1,5 +1,5 @@
 def tabulka(
-    frame, titulek="", bez_tecky=[], na_procenta=[], poradi=False, bez_zavorek=True
+    frame, titulek="", vysvetlivka="", bez_tecky=[], na_procenta=[], poradi=False, bez_zavorek=True
 ):
     dataframe = frame
 
@@ -48,6 +48,9 @@ def tabulka(
 
     if len(titulek) > 0:
         dataframe = dataframe.replace("<thead", f"<caption>{titulek}</caption><thead")
+
+    if len(vysvetlivka) > 0:
+        dataframe = dataframe.replace("</tbody>", f"</tbody><tfoot><tr style=\"text-align: center;\"><td colspan=\"100%\">{vysvetlivka}</td></tr></tfoot>")
 
     if bez_zavorek:
         dataframe = re.sub("\([\d]*\)", "", dataframe)
