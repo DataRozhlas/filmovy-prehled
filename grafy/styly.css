@@ -1,0 +1,64 @@
+text {
+  font-family: "Asap" !important;
+}
+
+.paragraph {
+  font-family: "Noticia text" !important;
+}
+
+.href {
+  color: #666;
+  fill: #666;
+}
+ 
+.highcharts-title {
+  font-family: "Noticia text" !important;
+  font-weight: bold !important;
+  text-align: left !important; 
+  /* font-size: 0.9rem !important;  */
+  left: 10px !important;
+}
+
+.highcharts-subtitle {
+  text-align: left !important; 
+  font-size: 0.95rem !important; 
+  left: 10px !important;
+  font-family: "Asap" !important;
+}
+
+.highcharts-data-labels text {
+  font-size: 0.85rem !important;
+}
+
+.highcharts-axis-labels text {
+  font-size: 0.85rem !important;
+}
+
+text.highcharts-plot-line-label {
+  font-size: 0.85rem !important;
+  fill: #666;
+}
+
+text.highcharts-plot-band-label {
+  font-size: 0.85rem !important;
+  fill: #666;
+}
+
+text.highcharts-credits {
+  font-size: 0.75rem !important;
+}
+
+.highcharts-tooltip span {
+  font-family: "Asap" !important;
+}
+
+/* Custom classes */
+.axis-label-on-tick {
+  fill: #aaa;
+  color: #aaa;
+}
+
+.mock-empty-line {
+  fill: #fff;
+  color: #fff;
+}

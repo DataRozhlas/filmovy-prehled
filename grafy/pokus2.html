@@ -1,0 +1,47 @@
+<html><head><title>Kdo vyr�b�l celove�ern� hran� filmy</title></head><body>
+    <div id="container"></div>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/networkgraph.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const prvni = ['A', 'B', 'C'];
+    const druhy = ['D', 'E', 'F'];
+    const treti = ['G', 'H', 'I'];
+
+    const nodes = [...prvni, ...druhy, ...treti].map((name, idx) => {
+        const group = idx < prvni.length ? 0 : (idx < prvni.length + druhy.length) ? 1 : 2;
+        return {
+            id: name,
+            x: group * 300,
+            y: (idx % (group == 2 ? treti.length : group == 1 ? druhy.length : prvni.length)) * 100,
+            title: name + (group == 0 ? ' (prvni)' : group == 1 ? ' (druhy)' : ' (treti)'),
+            marker: { radius: 10 }
+        };
+    });
+
+    const links = nodes.map((node, idx1) => {
+        const idx2 = (idx1 + 1) % nodes.length;
+        return { from: node.id, to: nodes[idx2].id };
+    });
+
+    Highcharts.chart('container', {
+        chart: {
+            type: 'networkgraph',
+            marginLeft: 80,
+            marginRight: 80
+        },
+        title: { text: 'Simple Network Graph' },
+        series: [{
+            dataLabels: { enabled: true, linkFormat: '' },
+            marker: { lineWidth: 1 },
+            data: links,
+            nodes: nodes
+        }]
+    });
+});</script>
+
+</body>
+</html>
