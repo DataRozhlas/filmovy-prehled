@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 Highcharts.chart('prehled',
 {
-  colors: ['#fd7f6f',
+  colors: ['#b2e061',
 '#7eb0d5',
-'#b2e061',
+'#fd7f6f',
 '#bd7ebe',
 '#ffb55a',
 '#ffee65',

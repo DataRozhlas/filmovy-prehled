@@ -26,3 +26,7 @@ Data byla naposledy oscrapována 27. 5. 2023.
 - Je možné, že se některé detaily některých filmů oscrapovaly chybně a ani několik desítek člověkohodin práce s datasetem k odhalení těchto chyb nevedly.
 
 - Několik jednotlivých životopisných údajů v dataframe `persony.json` je doplněno z jiných zdrojů.
+
+## To-do
+
+- Při čištění filmů převádět data premiér na datetime.

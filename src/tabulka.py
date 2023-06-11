@@ -43,7 +43,7 @@ def tabulka(
         .replace(
             '<table border="1" class="dataframe">',
             '<table class="dataframe table table--responsive table--w100p table--striped-red table--plain">',
-        )
+        ).replace(" , ",", ")
     )
 
     if len(titulek) > 0:

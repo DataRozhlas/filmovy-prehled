@@ -1,0 +1,530 @@
+<html><head><title>Podíl autorských filmù</title></head><body><script src="https://code.highcharts.com/highcharts.js"></script><style type="text/css">text {
+  font-family: "Asap" !important;
+}
+
+.paragraph {
+  font-family: "Noticia text" !important;
+}
+
+.href {
+  color: #666;
+  fill: #666;
+}
+ 
+.highcharts-title {
+  font-family: "Noticia text" !important;
+  font-weight: bold !important;
+  text-align: left !important; 
+  /* font-size: 0.9rem !important;  */
+  left: 10px !important;
+}
+
+.highcharts-subtitle {
+  text-align: left !important; 
+  font-size: 0.95rem !important; 
+  left: 10px !important;
+  font-family: "Asap" !important;
+}
+
+.highcharts-data-labels text {
+  font-size: 0.85rem !important;
+}
+
+.highcharts-axis-labels text {
+  font-size: 0.85rem !important;
+}
+
+text.highcharts-plot-line-label {
+  font-size: 0.85rem !important;
+  fill: #666;
+}
+
+text.highcharts-plot-band-label {
+  font-size: 0.85rem !important;
+  fill: #666;
+}
+
+text.highcharts-credits {
+  font-size: 0.75rem !important;
+}
+
+.highcharts-tooltip span {
+  font-family: "Asap" !important;
+}
+
+/* Custom classes */
+.axis-label-on-tick {
+  fill: #aaa;
+  color: #aaa;
+}
+
+.mock-empty-line {
+  fill: #fff;
+  color: #fff;
+}</style>
+        <figure id="autorskefilmy">
+        <div id="container"></div>
+        </figure>
+        <script>document.addEventListener('DOMContentLoaded', function() {
+Highcharts.chart('autorskefilmy',
+{
+  colors: ['#b2e061',
+'#7eb0d5',
+'#fd7f6f',
+'#bd7ebe',
+'#ffb55a',
+'#ffee65',
+'#beb9db',
+'#fdcce5',
+'#8bd3c7'],
+  credits: {
+  enabled: true,
+  href: 'https://www.irozhlas.cz/zpravy-tag/datova-zurnalistika',
+  text: 'Zdroj dat: Filmový pøehled | Vizualizace: Michal Kašpárek, iROZHLAS.cz'
+},
+  series: [{
+  data: [{
+  y: 50.0
+},
+{
+  y: 22.22
+},
+{
+  y: 19.05
+},
+{
+  y: 23.08
+},
+{
+  y: 37.5
+},
+{
+  y: 0.0
+},
+{
+  y: 3.03
+},
+{
+  y: 21.05
+},
+{
+  y: 8.33
+},
+{
+  y: 27.27
+},
+{
+  y: 6.67
+},
+{
+  y: 10.0
+},
+{
+  y: 12.5
+},
+{
+  y: 13.33
+},
+{
+  y: 10.71
+},
+{
+  y: 16.0
+},
+{
+  y: 7.69
+},
+{
+  y: 2.27
+},
+{
+  y: 13.16
+},
+{
+  y: 2.56
+},
+{
+  y: 12.5
+},
+{
+  y: 0.0
+},
+{
+  y: 9.09
+},
+{
+  y: 10.0
+},
+{
+  y: 0.0
+},
+{
+  y: 25.0
+},
+{
+  y: 30.77
+},
+{
+  y: 4.55
+},
+{
+  y: 0.0
+},
+{
+  y: 0.0
+},
+{
+  y: 5.88
+},
+{
+  y: 0.0
+},
+{
+  y: 12.5
+},
+{
+  y: 16.67
+},
+{
+  y: 30.77
+},
+{
+  y: 7.14
+},
+{
+  y: 20.83
+},
+{
+  y: 23.53
+},
+{
+  y: 22.73
+},
+{
+  y: 13.79
+},
+{
+  y: 28.0
+},
+{
+  y: 20.0
+},
+{
+  y: 23.33
+},
+{
+  y: 29.41
+},
+{
+  y: 13.79
+},
+{
+  y: 35.48
+},
+{
+  y: 31.25
+},
+{
+  y: 31.25
+},
+{
+  y: 32.14
+},
+{
+  y: 16.13
+},
+{
+  y: 33.33
+},
+{
+  y: 21.43
+},
+{
+  y: 34.62
+},
+{
+  y: 25.0
+},
+{
+  y: 22.22
+},
+{
+  y: 11.54
+},
+{
+  y: 13.79
+},
+{
+  y: 23.53
+},
+{
+  y: 26.32
+},
+{
+  y: 24.32
+},
+{
+  y: 17.14
+},
+{
+  y: 13.89
+},
+{
+  y: 30.3
+},
+{
+  y: 21.21
+},
+{
+  y: 12.12
+},
+{
+  y: 12.0
+},
+{
+  y: 24.14
+},
+{
+  y: 20.0
+},
+{
+  y: 28.0
+},
+{
+  y: 40.62
+},
+{
+  y: 28.57
+},
+{
+  y: 25.0
+},
+{
+  y: 50.0
+},
+{
+  y: 35.29
+},
+{
+  y: 25.0
+},
+{
+  y: 40.91
+},
+{
+  y: 45.0
+},
+{
+  y: 37.5
+},
+{
+  y: 56.25
+},
+{
+  y: 38.89
+},
+{
+  y: 43.75
+},
+{
+  y: 56.25
+},
+{
+  y: 47.37
+},
+{
+  y: 17.65
+},
+{
+  y: 40.0
+},
+{
+  y: 55.56
+},
+{
+  y: 42.11
+},
+{
+  y: 31.25
+},
+{
+  y: 24.14
+},
+{
+  y: 31.25
+},
+{
+  y: 47.62
+},
+{
+  y: 19.23
+},
+{
+  y: 17.86
+},
+{
+  y: 41.38
+},
+{
+  y: 19.35
+},
+{
+  y: 32.26
+},
+{
+  y: 21.62
+},
+{
+  y: 16.67
+},
+{
+  y: 27.03
+},
+{
+  y: 23.68
+},
+{
+  y: 19.05
+},
+{
+  y: 38.46
+},
+{
+  y: 14.29
+}],
+  name: 'autorské filmy',
+  yAxis: 0,
+  tooltip: {
+  valueSuffix: ' %'
+},
+  visible: true,
+  type: 'line'
+}],
+  subtitle: {
+  align: 'left',
+  text: 'Celoveèerní hrané filmy, ke kterým napsala námìt a scénáø a které režírovala stejná osoba.'
+},
+  title: {
+  align: 'left',
+  margin: 30,
+  text: 'Podíl autorských filmù'
+},
+  xAxis: {
+  categories: ['1920',
+'1921',
+'1922',
+'1923',
+'1924',
+'1925',
+'1926',
+'1927',
+'1928',
+'1929',
+'1930',
+'1931',
+'1932',
+'1933',
+'1934',
+'1935',
+'1936',
+'1937',
+'1938',
+'1939',
+'1940',
+'1941',
+'1942',
+'1943',
+'1944',
+'1945',
+'1946',
+'1947',
+'1948',
+'1949',
+'1950',
+'1951',
+'1952',
+'1953',
+'1954',
+'1955',
+'1956',
+'1957',
+'1958',
+'1959',
+'1960',
+'1961',
+'1962',
+'1963',
+'1964',
+'1965',
+'1966',
+'1967',
+'1968',
+'1969',
+'1970',
+'1971',
+'1972',
+'1973',
+'1974',
+'1975',
+'1976',
+'1977',
+'1978',
+'1979',
+'1980',
+'1981',
+'1982',
+'1983',
+'1984',
+'1985',
+'1986',
+'1987',
+'1988',
+'1989',
+'1990',
+'1991',
+'1992',
+'1993',
+'1994',
+'1995',
+'1996',
+'1997',
+'1998',
+'1999',
+'2000',
+'2001',
+'2002',
+'2003',
+'2004',
+'2005',
+'2006',
+'2007',
+'2008',
+'2009',
+'2010',
+'2011',
+'2012',
+'2013',
+'2014',
+'2015',
+'2016',
+'2017',
+'2018',
+'2019',
+'2020',
+'2021',
+'2022'],
+  min: 0
+},
+  yAxis: [{
+  labels: {
+  format: '{value} %'
+},
+  max: 100,
+  min: 0,
+  title: {
+  text: 'podíl z celkového poètu tvùrcù'
+}
+}]
+},
+);
+});</script></body></html>
