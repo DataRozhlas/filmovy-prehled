@@ -8,7 +8,7 @@ Highcharts.chart('veky',
   credits: {
   enabled: true,
   href: 'https://www.irozhlas.cz/zpravy-tag/datova-zurnalistika',
-  text: 'Zdroj dat: Filmový pøehled | Vizualizace: Michal Kašpárek, iROZHLAS.cz'
+  text: 'Zdroj dat: Filmový pøehled a Wikidata | Vizualizace: Michal Kašpárek, iROZHLAS.cz'
 },
   plotOptions: {
   column: {
@@ -765,7 +765,7 @@ Highcharts.chart('veky',
 }],
   subtitle: {
   align: 'left',
-  text: 'Do 24 let ženy ve filmech pøeèíslují muže, pak se z plátna pozvolna vytrácejí.'
+  text: 'Do 24 let ženy ve filmech pøeèíslují muže, pak se z plátna zaèínají vytrácet. Zlom mezi gendery se v posledním ètvrtstoletí posunul na 27 let, dat je zde ale ménì.'
 },
   title: {
   align: 'left',
@@ -837,7 +837,7 @@ Highcharts.chart('veky',
 },
   yAxis: [{
   title: {
-  text: 'Kolik rolí hráli lidé v daném vìku'
+  text: 'Poèet rolí'
 }
 }]
 },

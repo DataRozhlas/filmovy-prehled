@@ -1,4 +1,4 @@
-<html><head><title>Podíl žen</title></head><body><script src="https://code.highcharts.com/highcharts.js"></script><style type="text/css">text {
+<html><head><title>Zastoupení žen ve vybraných profesích</title></head><body><script src="https://code.highcharts.com/highcharts.js"></script><style type="text/css">text {
   font-family: "Asap" !important;
 }
 
@@ -68,15 +68,8 @@ text.highcharts-credits {
         <script>document.addEventListener('DOMContentLoaded', function() {
 Highcharts.chart('podilygender',
 {
-  colors: ['#b2e061',
-'#7eb0d5',
-'#fd7f6f',
-'#bd7ebe',
-'#ffb55a',
-'#ffee65',
-'#beb9db',
-'#fdcce5',
-'#8bd3c7'],
+  colors: ['#7eb0d5',
+'#fd7f6f'],
   credits: {
   enabled: true,
   href: 'https://www.irozhlas.cz/zpravy-tag/datova-zurnalistika',
@@ -90,10 +83,19 @@ Highcharts.chart('podilygender',
 },
   series: [{
   data: [{
+  y: 12.13
+},
+{
   y: 51.9
 },
 {
   y: 63.44
+},
+{
+  y: 72.32
+},
+{
+  y: 75.8
 },
 {
   y: 81.73
@@ -112,6 +114,9 @@ Highcharts.chart('podilygender',
 },
 {
   y: 99.0
+},
+{
+  y: 99.64
 }],
   name: 'Podíl mužù',
   yAxis: 1,
@@ -123,10 +128,19 @@ Highcharts.chart('podilygender',
 },
 {
   data: [{
+  y: 87.87
+},
+{
   y: 48.1
 },
 {
   y: 36.56
+},
+{
+  y: 27.68
+},
+{
+  y: 24.2
 },
 {
   y: 18.27
@@ -145,6 +159,9 @@ Highcharts.chart('podilygender',
 },
 {
   y: 1.0
+},
+{
+  y: 0.36
 }],
   name: 'Podíl žen',
   yAxis: 1,
@@ -154,25 +171,33 @@ Highcharts.chart('podilygender',
   visible: true,
   type: 'bar'
 }],
+  subtitle: {
+  align: 'left',
+  text: 'Statistika zachycuje èeské celoveèerní hrané filmy posledních 25 let.'
+},
   title: {
   align: 'left',
   margin: 30,
-  text: 'Podíl žen'
+  text: 'Zastoupení žen ve vybraných profesích'
 },
   xAxis: {
-  categories: ['Produkce',
+  categories: ['Skript',
+'Produkce',
 'Hrají',
+'Asistent režie',
+'Dramaturg',
 'Scénáø',
 'Pùvodní filmový námìt',
 'Režie',
 'Støih',
 'Zvuk',
-'Kamera'],
+'Kamera',
+'Koordinátor kaskadérù'],
   min: 0
 },
   yAxis: [{
   title: {
-  text: 'Kolik rolí hráli lidé v daném vìku'
+  text: ` `
 }
 },
 {
@@ -181,7 +206,10 @@ Highcharts.chart('podilygender',
 },
   max: 100,
   min: 0,
-  opposite: true
+  opposite: true,
+  title: {
+  text: ` `
+}
 }]
 },
 );

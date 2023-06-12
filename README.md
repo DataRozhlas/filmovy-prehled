@@ -1,6 +1,6 @@
 Datová analýza 125 let českého filmu pro články na serveru iROZHLAS.cz. 
 
-Data jsou oscrapovaná z [Filmového přehledu](https://filmovyprehled.cz/), autoritativní databáze spravované Národním filmovým archivem. Pro bližší informace o datových položkách viz [vysvětlivky této databáze](https://www.filmovyprehled.cz/cs/clanek/vysvetlivky-a-zkratky):
+Data jsou oscrapovaná z [Filmového přehledu](https://filmovyprehled.cz/), databáze spravované Národním filmovým archivem. Pro bližší informace o datových položkách viz [vysvětlivky této databáze](https://www.filmovyprehled.cz/cs/clanek/vysvetlivky-a-zkratky):
 
 > Jako primární zdroj informací při zpracování slouží jednotlivé filmy, pokud jsou dochované a dostupné na filmových kopiích, negativech nebo v digitální podobě ve sbírkách Národního filmového archivu. Čerpáno bylo z úvodních i závěrečných titulků, pokud možno původních, a zhlédnutím celého snímku.  
 Doplnění těchto údajů dále probíhá ze sekundárních zdrojů. Těmi jsou myšleny například distribuční listy, presskity, tiskové zprávy, plakáty, údaje od distributorů a samotných producentů, zákonná nabídková a oznamovací povinnost, cenzurní spisy, ministerské věstníky, internetová média, mapy, databáze, literární a technické scénáře, titulkové, dialogové a honorářové listiny, herecké smlouvy, výrobní listy, filmový a nefilmový soudobý tisk i časopisy, fotografie, reklamní materiály, ročenky, memoárové knihy, rozhovory s tvůrci a pamětníky, filmografické práce, publikace o filmařích a hercích, soupisové a obrazové publikace, literární předlohy, tiskové a novinářské konference a projekce, archivní prameny, zahraniční zdroje, soudobé mapy a řada dalších.
@@ -30,3 +30,5 @@ Data byla naposledy oscrapována 27. 5. 2023.
 ## To-do
 
 - Při čištění filmů převádět data premiér na datetime.
+
+- Scrapování cen a vyznamenání.
