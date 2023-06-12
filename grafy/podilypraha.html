@@ -1,0 +1,316 @@
+<html><head><title>Podíl lidí narozených v Praze</title></head><body><script src="https://code.highcharts.com/highcharts.js"></script><style type="text/css">text {
+  font-family: "Asap" !important;
+}
+
+.paragraph {
+  font-family: "Noticia text" !important;
+}
+
+.href {
+  color: #666;
+  fill: #666;
+}
+ 
+.highcharts-title {
+  font-family: "Noticia text" !important;
+  font-weight: bold !important;
+  text-align: left !important; 
+  /* font-size: 0.9rem !important;  */
+  left: 10px !important;
+}
+
+.highcharts-subtitle {
+  text-align: left !important; 
+  font-size: 0.95rem !important; 
+  left: 10px !important;
+  font-family: "Asap" !important;
+}
+
+.highcharts-data-labels text {
+  font-size: 0.85rem !important;
+}
+
+.highcharts-axis-labels text {
+  font-size: 0.85rem !important;
+}
+
+text.highcharts-plot-line-label {
+  font-size: 0.85rem !important;
+  fill: #666;
+}
+
+text.highcharts-plot-band-label {
+  font-size: 0.85rem !important;
+  fill: #666;
+}
+
+text.highcharts-credits {
+  font-size: 0.75rem !important;
+}
+
+.highcharts-tooltip span {
+  font-family: "Asap" !important;
+}
+
+/* Custom classes */
+.axis-label-on-tick {
+  fill: #aaa;
+  color: #aaa;
+}
+
+.mock-empty-line {
+  fill: #fff;
+  color: #fff;
+}</style>
+        <figure id="podilypraha">
+        <div id="container"></div>
+        </figure>
+        <script>document.addEventListener('DOMContentLoaded', function() {
+Highcharts.chart('podilypraha',
+{
+  colors: ['#b2e061',
+'#7eb0d5',
+'#fd7f6f',
+'#bd7ebe',
+'#ffb55a',
+'#ffee65',
+'#beb9db',
+'#fdcce5',
+'#8bd3c7'],
+  credits: {
+  enabled: true,
+  href: 'https://www.irozhlas.cz/zpravy-tag/datova-zurnalistika',
+  text: 'Zdroj dat: Filmový pøehled | Vizualizace: Michal Kašpárek, iROZHLAS.cz'
+},
+  legend: {
+  reversed: true
+},
+  plotOptions: {
+  bar: {
+  stacking: 'normal',
+  type: 'bar'
+}
+},
+  series: [{
+  data: [{
+  y: 8.32
+},
+{
+  y: 48.01
+},
+{
+  y: 35.68
+},
+{
+  y: 59.55
+},
+{
+  y: 39.65
+},
+{
+  y: 21.64
+},
+{
+  y: 24.16
+},
+{
+  y: 71.23
+},
+{
+  y: 44.41
+},
+{
+  y: 72.75
+},
+{
+  y: 56.72
+},
+{
+  y: 55.01
+}],
+  name: 'Nevyplnìno',
+  yAxis: 1,
+  tooltip: {
+  valueSuffix: ' %'
+},
+  visible: true,
+  type: 'bar'
+},
+{
+  data: [{
+  y: 4.66
+},
+{
+  y: 0.96
+},
+{
+  y: 4.54
+},
+{
+  y: 1.32
+},
+{
+  y: 3.19
+},
+{
+  y: 2.49
+},
+{
+  y: 2.42
+},
+{
+  y: 0.0
+},
+{
+  y: 7.23
+},
+{
+  y: 0.22
+},
+{
+  y: 2.13
+},
+{
+  y: 1.46
+}],
+  name: 'Mimo ÈR',
+  yAxis: 1,
+  tooltip: {
+  valueSuffix: ' %'
+},
+  visible: true,
+  type: 'bar'
+},
+{
+  data: [{
+  y: 53.41
+},
+{
+  y: 18.66
+},
+{
+  y: 27.7
+},
+{
+  y: 9.26
+},
+{
+  y: 27.91
+},
+{
+  y: 46.77
+},
+{
+  y: 44.96
+},
+{
+  y: 3.56
+},
+{
+  y: 27.19
+},
+{
+  y: 8.69
+},
+{
+  y: 23.28
+},
+{
+  y: 26.22
+}],
+  name: 'Jinde v ÈR',
+  yAxis: 1,
+  tooltip: {
+  valueSuffix: ' %'
+},
+  visible: true,
+  type: 'bar'
+},
+{
+  data: [{
+  y: 33.61
+},
+{
+  y: 32.37
+},
+{
+  y: 32.08
+},
+{
+  y: 29.87
+},
+{
+  y: 29.25
+},
+{
+  y: 29.1
+},
+{
+  y: 28.47
+},
+{
+  y: 25.21
+},
+{
+  y: 21.17
+},
+{
+  y: 18.34
+},
+{
+  y: 17.87
+},
+{
+  y: 17.3
+}],
+  name: 'Praha',
+  yAxis: 1,
+  tooltip: {
+  valueSuffix: ' %'
+},
+  visible: true,
+  type: 'bar'
+}],
+  subtitle: {
+  align: 'left',
+  text: 'Rodištì lidí pracujících na hraných celoveèerních filmech posledních 25 let.'
+},
+  title: {
+  align: 'left',
+  margin: 30,
+  text: 'Podíl lidí narozených v Praze'
+},
+  xAxis: {
+  categories: ['Režie',
+'Dramaturg',
+'Kamera',
+'Výkonná produkce',
+'Producent',
+'Pùvodní filmový námìt',
+'Scénáø',
+'Masky',
+'Mluví',
+'Zvuk',
+'Støih',
+'Hrají'],
+  min: 0
+},
+  yAxis: [{
+  title: {
+  text: ` `
+}
+},
+{
+  labels: {
+  format: '{value} %'
+},
+  max: 100,
+  min: 0,
+  opposite: true,
+  title: {
+  text: ` `
+}
+}]
+},
+);
+});</script></body></html>

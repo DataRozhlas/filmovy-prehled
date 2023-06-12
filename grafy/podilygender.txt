@@ -1,0 +1,121 @@
+document.addEventListener('DOMContentLoaded', function() {
+Highcharts.chart('podilygender',
+{
+  colors: ['#b2e061',
+'#7eb0d5',
+'#fd7f6f',
+'#bd7ebe',
+'#ffb55a',
+'#ffee65',
+'#beb9db',
+'#fdcce5',
+'#8bd3c7'],
+  credits: {
+  enabled: true,
+  href: 'https://www.irozhlas.cz/zpravy-tag/datova-zurnalistika',
+  text: 'Zdroj dat: Filmový pøehled | Vizualizace: Michal Kašpárek, iROZHLAS.cz'
+},
+  plotOptions: {
+  bar: {
+  stacking: 'normal',
+  type: 'bar'
+}
+},
+  series: [{
+  data: [{
+  y: 51.9
+},
+{
+  y: 63.44
+},
+{
+  y: 81.73
+},
+{
+  y: 82.98
+},
+{
+  y: 86.87
+},
+{
+  y: 89.76
+},
+{
+  y: 93.38
+},
+{
+  y: 99.0
+}],
+  name: 'Podíl mužù',
+  yAxis: 1,
+  tooltip: {
+  valueSuffix: ' %'
+},
+  visible: true,
+  type: 'bar'
+},
+{
+  data: [{
+  y: 48.1
+},
+{
+  y: 36.56
+},
+{
+  y: 18.27
+},
+{
+  y: 17.02
+},
+{
+  y: 13.13
+},
+{
+  y: 10.24
+},
+{
+  y: 6.62
+},
+{
+  y: 1.0
+}],
+  name: 'Podíl žen',
+  yAxis: 1,
+  tooltip: {
+  valueSuffix: ' %'
+},
+  visible: true,
+  type: 'bar'
+}],
+  title: {
+  align: 'left',
+  margin: 30,
+  text: 'Podíl žen'
+},
+  xAxis: {
+  categories: ['Produkce',
+'Hrají',
+'Scénáø',
+'Pùvodní filmový námìt',
+'Režie',
+'Støih',
+'Zvuk',
+'Kamera'],
+  min: 0
+},
+  yAxis: [{
+  title: {
+  text: 'Kolik rolí hráli lidé v daném vìku'
+}
+},
+{
+  labels: {
+  format: '{value} %'
+},
+  max: 100,
+  min: 0,
+  opposite: true
+}]
+},
+);
+});
