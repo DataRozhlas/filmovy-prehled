@@ -126,17 +126,17 @@ def graf(
     if len(barvy) > 0:
         my_chart.options.colors = barvy
     else:    
-        my_chart.options.colors = [
-            "#b2e061",
-            "#7eb0d5",
-            "#fd7f6f",
-            "#bd7ebe",
-            "#ffb55a",
-            "#ffee65",
-            "#beb9db",
-            "#fdcce5",
-            "#8bd3c7",
-        ]
+        my_chart.options.colors = colors = [
+            "#b2e061",  ## světle zelená (light green)
+            "#7eb0d5",  ## světle modrá (light blue)
+            "#fd7f6f",  ## světle červená (light red)
+            "#bd7ebe",  ## světle fialová (light purple)
+            "#ffb55a",  ## oranžová (orange)
+            "#ffee65",  ## žlutá (yellow)
+            "#beb9db",  ## levandulová (lavender)
+            "#fdcce5",  ## skoro černá
+            "#8bd3c7",  ## světle tyrkysová (light turquoise)
+]
 
     if naopak:
         my_chart.options.legend = Legend(reversed = True)

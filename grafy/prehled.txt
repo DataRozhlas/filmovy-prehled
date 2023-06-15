@@ -1,15 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 Highcharts.chart('prehled',
 {
-  colors: ['#b2e061',
-'#7eb0d5',
-'#fd7f6f',
-'#bd7ebe',
-'#ffb55a',
-'#ffee65',
-'#beb9db',
-'#fdcce5',
-'#8bd3c7'],
+  colors: ['#ffb55a',
+'#7eb0d5'],
   credits: {
   enabled: true,
   href: 'https://www.irozhlas.cz/zpravy-tag/datova-zurnalistika',
@@ -397,7 +390,7 @@ Highcharts.chart('prehled',
 {
   y: 8
 }],
-  name: 'ostatní filmy',
+  name: 'Ostatní filmy',
   yAxis: 0,
   visible: true,
   type: 'column'
@@ -778,14 +771,14 @@ Highcharts.chart('prehled',
 {
   y: 7
 }],
-  name: 'hrané celoveèerní filmy',
+  name: 'Hrané celoveèerní filmy',
   yAxis: 0,
   visible: true,
   type: 'column'
 }],
   subtitle: {
   align: 'left',
-  text: 'Letopoèty se vztahují k roku copyrightu uvedenému v titulcích. Napøíklad trezorový film Ucho mìl premiéru až v roce 1990, podle copyrightu jde ale o film z roku 1969, kdy skonèila jeho výroba.'
+  text: 'Letopoèty se vztahují k roku copyrightu uvedenému v titulcích. Napøíklad trezorový film Ucho mìl sice premiéru až v roce 1990, podle copyrightu jde ale o film z roku 1969.'
 },
   title: {
   align: 'left',

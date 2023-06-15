@@ -233,38 +233,43 @@ var treti = ['Jan Kačer',
  ['Vladimír Hlavatý', 'Aleš Najbrt'],
  ['Jára Kohout', 'Martin Hub']];
 
+
+ function createNodes(names, category) {
+  return names.map(function(name) {
+    return { id: name, category: category };
+  });
+}
+
+ const prvniNodes = createNodes(prvni, 0);
+const druziNodes = createNodes(druzi, 1);
+const tretiNodes = createNodes(treti, 2);
+
+ const nodes = prvniNodes.concat(druziNodes, tretiNodes);
+
     // Create the chart
 Highcharts.chart('container', {
+  plotOptions: {
+  networkgraph: {
+    layoutAlgorithm: {
+      linkLength: 50, // Adjust this value to increase/decrease distance between nodes
+      levels: [
+        { level: 0, color: '#1E90FF', margin: 0 },
+        { level: 1, color: '#00FF00', margin: 0 },
+        { level: 2, color: '#FFA500', margin: 0 }
+      ]
+    },
+  },
+},
   chart: {
     type: 'networkgraph'
   },
   series: [
-    {type: 'networkgraph',
-    data: data,
-    nodes: [{
-            id: 'Ivana Chýlková'
-        }],
-
-    layoutAlgorithm: {
-
-initialPositions: function () {
-
-    this.nodes.forEach(function (node) {
-       if(node.id == "Ivana Chýlková"){
-            node.plotX = 200;
-          node.plotY = 100;
-       }
-       if(node.id == "František Kovářík"){
-            node.plotX = 0;
-          node.plotY = 200;
-       }
-
-    });
-}
-},
+    {
       dataLabels: {
         enabled: true
-      }
+      },
+      data: data,
+      nodes: nodes
     }
   ]
 });

@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 Highcharts.chart('vyrobci',
 {
-  colors: ['#b2e061',
-'#7eb0d5',
+  colors: ['#7eb0d5',
+'#b2e061',
 '#fd7f6f',
 '#bd7ebe',
 '#ffb55a',
@@ -325,7 +325,7 @@ Highcharts.chart('vyrobci',
 {
   y: 17
 }],
-  name: 'poèet unikátních výrobcù filmù',
+  name: 'Poèet unikátních výrobcù',
   yAxis: 0,
   visible: true,
   type: 'column'
@@ -2548,7 +2548,7 @@ Highcharts.chart('vyrobci',
 {
   y: 85.71
 }],
-  name: 's podporou Státního fondu kinematografie',
+  name: 'S podporou Státního fondu kinematografie',
   yAxis: 1,
   tooltip: {
   valueSuffix: ' %'
@@ -2669,7 +2669,7 @@ Highcharts.chart('vyrobci',
 },
   yAxis: [{
   title: {
-  text: 'poèet unikátních výrobcù'
+  text: 'unikátní výrobci'
 }
 },
 {
@@ -2680,7 +2680,7 @@ Highcharts.chart('vyrobci',
   min: 0,
   opposite: true,
   title: {
-  text: 'podíl na roèní produkci'
+  text: 'podíl na produkci'
 }
 }]
 },

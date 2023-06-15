@@ -325,7 +325,7 @@ Highcharts.chart('obsahfilmu',
 {
   y: 0.0
 }],
-  name: 'milenci, milenky, nemanželské pomìry',
+  name: 'Milenci, milenky, nemanželské pomìry',
   yAxis: 0,
   tooltip: {
   valueSuffix: ' %'
@@ -643,7 +643,7 @@ Highcharts.chart('obsahfilmu',
 {
   y: 0.0
 }],
-  name: 'vražda, znásilnìní, pøepadení, loupež',
+  name: 'Vražda, znásilnìní, pøepadení, loupež',
   yAxis: 0,
   tooltip: {
   valueSuffix: ' %'
@@ -961,7 +961,7 @@ Highcharts.chart('obsahfilmu',
 {
   y: 0.0
 }],
-  name: 'homesexuál, gay, lesba',
+  name: 'Homesexuál, gay, lesba',
   yAxis: 0,
   tooltip: {
   valueSuffix: ' %'
@@ -1279,7 +1279,7 @@ Highcharts.chart('obsahfilmu',
 {
   y: 0.0
 }],
-  name: 'svatby, zásnuby, vìno',
+  name: 'Svatby, zásnuby, vìno',
   yAxis: 0,
   tooltip: {
   valueSuffix: ' %'
@@ -1597,7 +1597,7 @@ Highcharts.chart('obsahfilmu',
 {
   y: 0.0
 }],
-  name: 'komunis…, socialis…, KSÈ',
+  name: 'Komunis…, socialis…, KSÈ',
   yAxis: 0,
   tooltip: {
   valueSuffix: ' %'
@@ -1915,7 +1915,7 @@ Highcharts.chart('obsahfilmu',
 {
   y: 14.29
 }],
-  name: 'hrabì(nka), kníže, knìžna',
+  name: 'Hrabì(nka), kníže, knìžna',
   yAxis: 0,
   tooltip: {
   valueSuffix: ' %'
@@ -2233,7 +2233,7 @@ Highcharts.chart('obsahfilmu',
 {
   y: 0.0
 }],
-  name: 'kavárny',
+  name: 'Kavárny',
   yAxis: 0,
   tooltip: {
   valueSuffix: ' %'
@@ -2551,7 +2551,7 @@ Highcharts.chart('obsahfilmu',
 {
   y: 0.0
 }],
-  name: 'továrny a pole',
+  name: 'Továrny a pole',
   yAxis: 0,
   tooltip: {
   valueSuffix: ' %'
@@ -2561,7 +2561,7 @@ Highcharts.chart('obsahfilmu',
 }],
   subtitle: {
   align: 'left',
-  text: 'Výskyt klíèových slov v popisech dìje èeských filmù. (Nadmìreènì dlouhé popisy byly pro férovost zkráceny.)'
+  text: 'Jak velká èást roèní produkce má v popisu dìje konkrétní slovo èi skupinu slov. (Nadmìreènì dlouhé popisy byly pro férovost zkráceny.)'
 },
   title: {
   align: 'left',
@@ -2681,7 +2681,7 @@ Highcharts.chart('obsahfilmu',
   max: 60,
   min: 0,
   title: {
-  text: 'Podíl filmù obsahujících daný termín nebo termíny'
+  text: ` `
 }
 }]
 },
