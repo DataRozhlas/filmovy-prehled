@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highcharts Network Graph</title>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/networkgraph.js"></script>
+  <style>
+    #container {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Define your nodes and links
+      var nodes = [
+        { id: 'Josef Šváb-Malostranský', name: 'Josef Šváb-Malostranský', category: 'Category A'},
+        { id: 'Václav Wasserman', name: 'Václav Wasserman', category: 'Category B'},
+{ id: 'Marta Májová', name: 'Marta Májová', category: 'Category B' },
+{ id: 'Václav Vydra ml.', name: 'Václav Vydra ml.', category: 'Category B' },
+{ id: 'Světla Svozilová', name: 'Světla Svozilová', category: 'Category B' },
+{ id: 'František Kovářík', name: 'František Kovářík', category: 'Category B' },
+{ id: 'Ela Poznerová', name: 'Ela Poznerová', category: 'Category B' },
+{ id: 'Frank Argus', name: 'Frank Argus', category: 'Category B' },
+{ id: 'Zdeněk Štěpánek', name: 'Zdeněk Štěpánek', category: 'Category B' },
+{ id: 'Jaroslav Marvan', name: 'Jaroslav Marvan', category: 'Category B' },
+{ id: 'Bedřich Vrbský', name: 'Bedřich Vrbský', category: 'Category B' },
+{ id: 'Josef Steigl', name: 'Josef Steigl', category: 'Category B' },
+{ id: 'Anna Gabrielová', name: 'Anna Gabrielová', category: 'Category B' },
+{ id: 'Gabriela Bártlová-Buddeusová', name: 'Gabriela Bártlová-Buddeusová', category: 'Category B' },
+{ id: 'Ela Šárková', name: 'Ela Šárková', category: 'Category B' },
+{ id: 'Marie Nademlejnská', name: 'Marie Nademlejnská', category: 'Category B' },
+{ id: 'Nataša Gollová', name: 'Nataša Gollová', category: 'Category B' },
+{ id: 'Vladimír Hlavatý', name: 'Vladimír Hlavatý', category: 'Category B' },
+{ id: 'Slávka Doležalová-Kulhavá', name: 'Slávka Doležalová-Kulhavá', category: 'Category B' },
+{ id: 'Antonín Meisner', name: 'Antonín Meisner', category: 'Category B' },
+{ id: 'Jarmila Kronbauerová', name: 'Jarmila Kronbauerová', category: 'Category B' },
+{ id: 'Jára Kohout', name: 'Jára Kohout', category: 'Category B' },
+{ id: 'Alois Dvorský', name: 'Alois Dvorský', category: 'Category B' },
+{ id: 'Darja Hajská', name: 'Darja Hajská', category: 'Category B' },
+{ id: 'Eman Fiala', name: 'Eman Fiala', category: 'Category B' },
+{ id: 'L. H. Struna', name: 'L. H. Struna', category: 'Category B' },
+{ id: 'Jan Kačer', name: 'Jan Kačer', category: 'Category C' },
+{ id: 'Iva Janžurová', name: 'Iva Janžurová', category: 'Category C' },
+{ id: 'Pavel Nový', name: 'Pavel Nový', category: 'Category C' },
+{ id: 'Zdeněk Dušek', name: 'Zdeněk Dušek', category: 'Category C' },
+{ id: 'Jiří Navrátil', name: 'Jiří Navrátil', category: 'Category C' },
+{ id: 'Petr Štěpánek', name: 'Petr Štěpánek', category: 'Category C' },
+{ id: 'Miroslav Vladyka', name: 'Miroslav Vladyka', category: 'Category C' },
+{ id: 'Marek Vašut', name: 'Marek Vašut', category: 'Category C' },
+{ id: 'Václav Černý', name: 'Václav Černý', category: 'Category C' },
+{ id: 'Boleslav Polívka', name: 'Boleslav Polívka', category: 'Category C' },
+{ id: 'Taťjana Medvecká', name: 'Taťjana Medvecká', category: 'Category C' },
+{ id: 'Roman Skamene', name: 'Roman Skamene', category: 'Category C' },
+{ id: 'Daniela Kolářová', name: 'Daniela Kolářová', category: 'Category C' },
+{ id: 'Luděk Sobota', name: 'Luděk Sobota', category: 'Category C' },
+{ id: 'Ivan Pokorný', name: 'Ivan Pokorný', category: 'Category C' },
+{ id: 'Petr Jákl st.', name: 'Petr Jákl st.', category: 'Category C' },
+{ id: 'Jan Blažek', name: 'Jan Blažek', category: 'Category C' },
+{ id: 'Jiří Bartoška', name: 'Jiří Bartoška', category: 'Category C' },
+{ id: 'Jan Kuželka', name: 'Jan Kuželka', category: 'Category C' },
+{ id: 'Josef Lébr', name: 'Josef Lébr', category: 'Category C' },
+{ id: 'Václav Vydra nejml.', name: 'Václav Vydra nejml.', category: 'Category C' },
+{ id: 'Jiří Lábus', name: 'Jiří Lábus', category: 'Category C' },
+{ id: 'Otakar Brousek ml.', name: 'Otakar Brousek ml.', category: 'Category C' },
+{ id: 'Vladislav Beneš', name: 'Vladislav Beneš', category: 'Category C' },
+{ id: 'Milan Šteindler', name: 'Milan Šteindler', category: 'Category C' },
+{ id: 'Uršula Kluková', name: 'Uršula Kluková', category: 'Category C' },
+{ id: 'František Ringo Čech', name: 'František Ringo Čech', category: 'Category C' },
+{ id: 'Vlasta Žehrová', name: 'Vlasta Žehrová', category: 'Category C' },
+{ id: 'Rostislav Novák st.', name: 'Rostislav Novák st.', category: 'Category C' },
+{ id: 'Daniela Vacková', name: 'Daniela Vacková', category: 'Category C' },
+{ id: 'Petr Drozda', name: 'Petr Drozda', category: 'Category C' },
+{ id: 'Jiří Novák', name: 'Jiří Novák', category: 'Category C' },
+{ id: 'Ondřej Pavelka', name: 'Ondřej Pavelka', category: 'Category C' },
+{ id: 'Ondřej Vetchý', name: 'Ondřej Vetchý', category: 'Category C' },
+{ id: 'Lukáš Vaculík', name: 'Lukáš Vaculík', category: 'Category C' },
+{ id: 'Josef Hervert', name: 'Josef Hervert', category: 'Category C' },
+{ id: 'Sabina Remundová', name: 'Sabina Remundová', category: 'Category C' },
+{ id: 'David Matásek', name: 'David Matásek', category: 'Category C' },
+{ id: 'Jiří Langmajer', name: 'Jiří Langmajer', category: 'Category C' },
+{ id: 'Ivana Chýlková', name: 'Ivana Chýlková', category: 'Category C' },
+{ id: 'Alena Mihulová', name: 'Alena Mihulová', category: 'Category C' },
+{ id: 'Lenka Vychodilová', name: 'Lenka Vychodilová', category: 'Category C' },
+{ id: 'Aleš Najbrt', name: 'Aleš Najbrt', category: 'Category C' },
+{ id: 'Martin Hub', name: 'Martin Hub', category: 'Category C' }
+        // Add more nodes...
+      ];
+
+      var links = [
+      { from: 'Josef Šváb-Malostranský', to: 'Václav Wasserman', color: 'red',  },
+{ from: 'Josef Šváb-Malostranský', to: 'Marta Májová' },
+{ from: 'Josef Šváb-Malostranský', to: 'Václav Vydra ml.' },
+{ from: 'Josef Šváb-Malostranský', to: 'Světla Svozilová' },
+{ from: 'Josef Šváb-Malostranský', to: 'František Kovářík' },
+{ from: 'Josef Šváb-Malostranský', to: 'Ela Poznerová' },
+{ from: 'Josef Šváb-Malostranský', to: 'Frank Argus' },
+{ from: 'Josef Šváb-Malostranský', to: 'Zdeněk Štěpánek' },
+{ from: 'Josef Šváb-Malostranský', to: 'Jaroslav Marvan' },
+{ from: 'Josef Šváb-Malostranský', to: 'Bedřich Vrbský' },
+{ from: 'Josef Šváb-Malostranský', to: 'Josef Steigl' },
+{ from: 'Josef Šváb-Malostranský', to: 'Anna Gabrielová' },
+{ from: 'Josef Šváb-Malostranský', to: 'Gabriela Bártlová-Buddeusová' },
+{ from: 'Josef Šváb-Malostranský', to: 'Ela Šárková' },
+{ from: 'Josef Šváb-Malostranský', to: 'Marie Nademlejnská' },
+{ from: 'Josef Šváb-Malostranský', to: 'Nataša Gollová' },
+{ from: 'Josef Šváb-Malostranský', to: 'Vladimír Hlavatý' },
+{ from: 'Josef Šváb-Malostranský', to: 'Slávka Doležalová-Kulhavá' },
+{ from: 'Josef Šváb-Malostranský', to: 'Antonín Meisner' },
+{ from: 'Josef Šváb-Malostranský', to: 'Jarmila Kronbauerová' },
+{ from: 'Josef Šváb-Malostranský', to: 'Jára Kohout' },
+{ from: 'Josef Šváb-Malostranský', to: 'Alois Dvorský' },
+{ from: 'Josef Šváb-Malostranský', to: 'Darja Hajská' },
+{ from: 'Josef Šváb-Malostranský', to: 'Eman Fiala' },
+{ from: 'Josef Šváb-Malostranský', to: 'L. H. Struna' },
+      { from: 'Vladimír Hlavatý', to: 'Jan Kačer' },
+{ from: 'Nataša Gollová', to: 'Jan Kačer' },
+{ from: 'František Kovářík', to: 'Jan Kačer' },
+{ from: 'Darja Hajská', to: 'Iva Janžurová' },
+{ from: 'Eman Fiala', to: 'Iva Janžurová' },
+{ from: 'L. H. Struna', to: 'Iva Janžurová' },
+{ from: 'Josef Steigl', to: 'Iva Janžurová' },
+{ from: 'Marta Májová', to: 'Iva Janžurová' },
+{ from: 'Gabriela Bártlová-Buddeusová', to: 'Iva Janžurová' },
+{ from: 'Jarmila Kronbauerová', to: 'Iva Janžurová' },
+{ from: 'Světla Svozilová', to: 'Iva Janžurová' },
+{ from: 'Jaroslav Marvan', to: 'Iva Janžurová' },
+{ from: 'Bedřich Vrbský', to: 'Iva Janžurová' },
+{ from: 'Frank Argus', to: 'Iva Janžurová' },
+{ from: 'Slávka Doležalová-Kulhavá', to: 'Iva Janžurová' },
+{ from: 'Zdeněk Štěpánek', to: 'Iva Janžurová' },
+{ from: 'Vladimír Hlavatý', to: 'Iva Janžurová' },
+{ from: 'Václav Vydra ml.', to: 'Iva Janžurová' },
+{ from: 'Nataša Gollová', to: 'Iva Janžurová' },
+{ from: 'František Kovářík', to: 'Iva Janžurová' },
+{ from: 'Ela Poznerová', to: 'Iva Janžurová' },
+{ from: 'František Kovářík', to: 'Pavel Nový' },
+{ from: 'Vladimír Hlavatý', to: 'Pavel Nový' },
+{ from: 'Ela Šárková', to: 'Pavel Nový' },
+{ from: 'Jára Kohout', to: 'Pavel Nový' },
+{ from: 'L. H. Struna', to: 'Zdeněk Dušek' },
+{ from: 'Alois Dvorský', to: 'Zdeněk Dušek' },
+{ from: 'Marie Nademlejnská', to: 'Zdeněk Dušek' },
+{ from: 'Darja Hajská', to: 'Zdeněk Dušek' },
+{ from: 'Vladimír Hlavatý', to: 'Zdeněk Dušek' },
+{ from: 'Ela Šárková', to: 'Zdeněk Dušek' },
+{ from: 'L. H. Struna', to: 'Jiří Navrátil' },
+{ from: 'František Kovářík', to: 'Petr Štěpánek' },
+{ from: 'Anna Gabrielová', to: 'Petr Štěpánek' },
+{ from: 'Darja Hajská', to: 'Petr Štěpánek' },
+{ from: 'Eman Fiala', to: 'Miroslav Vladyka' },
+{ from: 'Gabriela Bártlová-Buddeusová', to: 'Miroslav Vladyka' },
+{ from: 'Alois Dvorský', to: 'Miroslav Vladyka' },
+{ from: 'Václav Wasserman', to: 'Miroslav Vladyka' },
+{ from: 'Vladimír Hlavatý', to: 'Miroslav Vladyka' },
+{ from: 'Darja Hajská', to: 'Miroslav Vladyka' },
+{ from: 'Jára Kohout', to: 'Miroslav Vladyka' },
+{ from: 'Alois Dvorský', to: 'Marek Vašut' },
+{ from: 'Václav Wasserman', to: 'Marek Vašut' },
+{ from: 'Vladimír Hlavatý', to: 'Marek Vašut' },
+{ from: 'Vladimír Hlavatý', to: 'Václav Černý' },
+{ from: 'Vladimír Hlavatý', to: 'Boleslav Polívka' },
+{ from: 'Eman Fiala', to: 'Taťjana Medvecká' },
+{ from: 'František Kovářík', to: 'Taťjana Medvecká' },
+{ from: 'Darja Hajská', to: 'Taťjana Medvecká' },
+{ from: 'Darja Hajská', to: 'Roman Skamene' },
+{ from: 'Světla Svozilová', to: 'Roman Skamene' },
+{ from: 'Ela Poznerová', to: 'Roman Skamene' },
+{ from: 'L. H. Struna', to: 'Roman Skamene' },
+{ from: 'Ela Šárková', to: 'Roman Skamene' },
+{ from: 'Vladimír Hlavatý', to: 'Roman Skamene' },
+{ from: 'Jára Kohout', to: 'Roman Skamene' },
+{ from: 'Vladimír Hlavatý', to: 'Daniela Kolářová' },
+{ from: 'Jaroslav Marvan', to: 'Daniela Kolářová' },
+{ from: 'Ela Poznerová', to: 'Daniela Kolářová' },
+{ from: 'František Kovářík', to: 'Daniela Kolářová' },
+{ from: 'Ela Šárková', to: 'Daniela Kolářová' },
+{ from: 'Darja Hajská', to: 'Luděk Sobota' },
+{ from: 'Ela Šárková', to: 'Luděk Sobota' },
+{ from: 'Vladimír Hlavatý', to: 'Luděk Sobota' },
+{ from: 'Jára Kohout', to: 'Luděk Sobota' },
+{ from: 'František Kovářík', to: 'Ivan Pokorný' },
+{ from: 'Nataša Gollová', to: 'Ivan Pokorný' },
+{ from: 'Vladimír Hlavatý', to: 'Petr Jákl st.' },
+{ from: 'Jaroslav Marvan', to: 'Petr Jákl st.' },
+{ from: 'Gabriela Bártlová-Buddeusová', to: 'Petr Jákl st.' },
+{ from: 'František Kovářík', to: 'Petr Jákl st.' },
+{ from: 'Jaroslav Marvan', to: 'Jan Blažek' },
+{ from: 'Vladimír Hlavatý', to: 'Jiří Bartoška' },
+{ from: 'Darja Hajská', to: 'Jan Kuželka' },
+{ from: 'L. H. Struna', to: 'Jan Kuželka' },
+{ from: 'Antonín Meisner', to: 'Jan Kuželka' },
+{ from: 'Vladimír Hlavatý', to: 'Jan Kuželka' },
+{ from: 'Gabriela Bártlová-Buddeusová', to: 'Jan Kuželka' },
+{ from: 'František Kovářík', to: 'Jan Kuželka' },
+{ from: 'Ela Šárková', to: 'Jan Kuželka' },
+{ from: 'Nataša Gollová', to: 'Jan Kuželka' },
+{ from: 'Vladimír Hlavatý', to: 'Josef Lébr' },
+{ from: 'Ela Poznerová', to: 'Václav Vydra nejml.' },
+{ from: 'Ela Šárková', to: 'Václav Vydra nejml.' },
+{ from: 'Vladimír Hlavatý', to: 'Václav Vydra nejml.' },
+{ from: 'Gabriela Bártlová-Buddeusová', to: 'Jiří Lábus' },
+{ from: 'Darja Hajská', to: 'Jiří Lábus' },
+{ from: 'Ela Šárková', to: 'Jiří Lábus' },
+{ from: 'Vladimír Hlavatý', to: 'Jiří Lábus' },
+{ from: 'Jára Kohout', to: 'Jiří Lábus' },
+{ from: 'Vladimír Hlavatý', to: 'Otakar Brousek ml.' },
+{ from: 'Vladimír Hlavatý', to: 'Vladislav Beneš' },
+{ from: 'L. H. Struna', to: 'Vladislav Beneš' },
+{ from: 'Vladimír Hlavatý', to: 'Milan Šteindler' },
+{ from: 'Ela Šárková', to: 'Milan Šteindler' },
+{ from: 'Vladimír Hlavatý', to: 'Uršula Kluková' },
+{ from: 'Vladimír Hlavatý', to: 'František Ringo Čech' },
+{ from: 'František Kovářík', to: 'Vlasta Žehrová' },
+{ from: 'Darja Hajská', to: 'Vlasta Žehrová' },
+{ from: 'Ela Šárková', to: 'Vlasta Žehrová' },
+{ from: 'František Kovářík', to: 'Rostislav Novák st.' },
+{ from: 'Vladimír Hlavatý', to: 'Daniela Vacková' },
+{ from: 'Darja Hajská', to: 'Daniela Vacková' },
+{ from: 'Ela Šárková', to: 'Daniela Vacková' },
+{ from: 'Vladimír Hlavatý', to: 'Petr Drozda' },
+{ from: 'Ela Poznerová', to: 'Petr Drozda' },
+{ from: 'Vladimír Hlavatý', to: 'Jiří Novák' },
+{ from: 'Vladimír Hlavatý', to: 'Ondřej Pavelka' },
+{ from: 'Vladimír Hlavatý', to: 'Ondřej Vetchý' },
+{ from: 'Ela Šárková', to: 'Ondřej Vetchý' },
+{ from: 'Vladimír Hlavatý', to: 'Lukáš Vaculík' },
+{ from: 'Darja Hajská', to: 'Josef Hervert' },
+{ from: 'Vladimír Hlavatý', to: 'Sabina Remundová' },
+{ from: 'Vladimír Hlavatý', to: 'David Matásek' },
+{ from: 'Ela Šárková', to: 'David Matásek' },
+{ from: 'Jára Kohout', to: 'Jiří Langmajer' },
+{ from: 'František Kovářík', to: 'Ivana Chýlková' },
+{ from: 'Ela Šárková', to: 'Ivana Chýlková' },
+{ from: 'Vladimír Hlavatý', to: 'Alena Mihulová' },
+{ from: 'Vladimír Hlavatý', to: 'Lenka Vychodilová' },
+{ from: 'Vladimír Hlavatý', to: 'Aleš Najbrt' },
+{ from: 'Jára Kohout', to: 'Martin Hub' }
+
+      ];
+
+      // Create separate series for each category
+      var seriesData = [
+        {
+          name: 'Category A',
+          data: [],
+        },
+        {
+          name: 'Category B',
+          data: [],
+        },
+        {
+          name: 'Category C',
+          data: [],
+        },
+      ];
+
+      // Assign nodes to their respective series based on category
+      nodes.forEach(function(node) {
+        var categoryIndex = seriesData.findIndex(function(series) {
+          return series.name === node.category;
+        });
+
+        if (categoryIndex >= 0) {
+          seriesData[categoryIndex].data.push(node);
+        }
+      });
+
+      var specificNode = seriesData.find(function(series) {
+  return series.name === 'Category A';
+}).data.find(function(node) {
+  return node.id === 'Josef Šváb-Malostranský';
+});
+
+if (specificNode) {
+  specificNode.x = -500; // Adjust the x-coordinate as per your requirement
+  specificNode.y = 0;   // Adjust the y-coordinate as per your requirement
+}
+
+      // Create the Highcharts chart
+      Highcharts.chart('container', {
+        chart: {
+          type: 'networkgraph',
+        },
+        title: {
+          text: 'Lidské červí díry českého filmu',
+        },
+        plotOptions: {
+    networkgraph: {
+      layoutAlgorithm: {
+        enableSimulation: false,
+        linkLength: 100,
+        integration: 'verlet',
+        initialPositions: function () {
+          // Calculate initial positions based on categories
+          var xPos = 0;
+          var yPos = 0;
+
+          seriesData.forEach(function (series) {
+            series.data.forEach(function (node) {
+              node.x = xPos;
+              node.y = yPos;
+              yPos += 100; // Adjust the vertical spacing as per your requirement
+            });
+            xPos += 300; // Adjust the horizontal spacing as per your requirement
+            yPos = 0;
+          });
+        }
+      },
+      nodePlacement: 'between',
+      dataLabels: {
+        enabled: true,
+        style: {
+          color: 'black',
+          fontSize: '10px',
+          textOutline: '0',
+        },
+      },
+      
+    },
+  },
+  series: seriesData.map(function (series) {
+    return {
+      data: series.data,
+      dataLabels: {
+        enabled: true,
+        style: {
+          color: 'black',
+          fontSize: '10px',
+          textOutline: '0',
+        },
+      },
+    };
+  }),
+        series: [{
+          data: links,
+        }],
+      });
+    });
+  </script>
+</body>
+</html>
