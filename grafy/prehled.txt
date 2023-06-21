@@ -8,6 +8,9 @@ Highcharts.chart('prehled',
   href: 'https://www.irozhlas.cz/zpravy-tag/datova-zurnalistika',
   text: 'Zdroj dat: Filmový pøehled | Vizualizace: Michal Kašpárek, iROZHLAS.cz'
 },
+  legend: {
+  reversed: true
+},
   plotOptions: {
   column: {
   stacking: 'normal',
@@ -390,7 +393,7 @@ Highcharts.chart('prehled',
 {
   y: 8
 }],
-  name: 'Ostatní filmy',
+  name: 'Ostatní filmy (animované, dokumentární, krátké aj.)',
   yAxis: 0,
   visible: true,
   type: 'column'

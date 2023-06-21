@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/sankey.js"></script>
+    
+<style type="text/css">text {
+        font-family: "Asap" !important;
+      }
+      
+      .paragraph {
+        font-family: "Noticia text" !important;
+      }
+      
+      .href {
+        color: #666;
+        fill: #666;
+      }
+       
+      .highcharts-title {
+        font-family: "Noticia text" !important;
+        font-weight: bold !important;
+        text-align: left !important; 
+        /* font-size: 0.9rem !important;  */
+        left: 10px !important;
+      }
+      
+      .highcharts-subtitle {
+        text-align: left !important; 
+        font-size: 0.95rem !important; 
+        left: 10px !important;
+        font-family: "Asap" !important;
+      }
+      
+      .highcharts-data-labels text {
+        font-size: 0.85rem !important;
+      }
+      
+      .highcharts-axis-labels text {
+        font-size: 0.85rem !important;
+      }
+      
+      text.highcharts-plot-line-label {
+        font-size: 0.85rem !important;
+        fill: #666;
+      }
+      
+      text.highcharts-plot-band-label {
+        font-size: 0.85rem !important;
+        fill: #666;
+      }
+      
+      text.highcharts-credits {
+        font-size: 0.75rem !important;
+      }
+      
+      .highcharts-tooltip span {
+        font-family: "Asap" !important;
+      }
+      
+      /* Custom classes */
+      .axis-label-on-tick {
+        fill: #aaa;
+        color: #aaa;
+      }
+      
+      .mock-empty-line {
+        fill: #fff;
+        color: #fff;
+      }</style>
+
+    <figure id="cervidiry">
+    <div id="container"></div>
+</figure>
+    
+    <script>
+Highcharts.chart('container', {
+    colors: ['#b2e061',
+'#7eb0d5',
+'#fd7f6f',
+'#bd7ebe',
+'#ffb55a',
+'#ffee65',
+'#beb9db',
+'#fdcce5',
+'#8bd3c7'],
+
+title: {
+  text: 'Červí díry českého filmu',
+  align: 'left'
+},
+subtitle:
+{align: "left",
+text: "Propojení prvního českého filmového herce (vlevo) se s aktivními herci (vpravo) přes společné spoluherce a spoluherečky („červí díry“ – uprostřed). Čísla označují společné filmy. Pro přehlednost grafu jsme vybrali 10 nejvýznamějších propojovatelů (z celkem 25 „červích děr“) a 10 nejsilněji napojených současníků (z celkem 44)."},
+credits: {
+  enabled: true,
+  href: 'https://www.irozhlas.cz/zpravy-tag/datova-zurnalistika',
+  text: 'Zdroj dat: Filmový přehled | Vizualizace: Petr Kočí a Michal Kašpárek, iROZHLAS.cz'
+},
+accessibility: {
+  point: {
+    valueDescriptionFormat: '{index}. {point.from} to {point.to}, {point.weight}.'
+  }
+},
+series: [{
+  keys: ['from', 'to', 'weight'],
+  data: [['Josef Šváb-Malostranský', 'Eman Fiala', 11],
+ ['Josef Šváb-Malostranský', 'František Kovářík', 1],
+ ['Josef Šváb-Malostranský', 'Jára Kohout', 4],
+ ['Josef Šváb-Malostranský', 'Vladimír Hlavatý', 1],
+ ['Josef Šváb-Malostranský', 'L. H. Struna', 10],
+ ['Josef Šváb-Malostranský', 'Jaroslav Marvan', 8],
+ ['Josef Šváb-Malostranský', 'Darja Hajská', 5],
+ ['Josef Šváb-Malostranský', 'Ela Poznerová', 1],
+ ['Josef Šváb-Malostranský', 'Gabriela Bártlová-Buddeusová', 3],
+ ['Josef Šváb-Malostranský', 'Ela Šárková', 1],
+ ['Eman Fiala', 'Iva Janžurová', 2],
+ ['Eman Fiala', 'Miroslav Vladyka', 2],
+ ['František Kovářík', 'Iva Janžurová', 1],
+ ['František Kovářík', 'Daniela Kolářová', 1],
+ ['František Kovářík', 'Petr Jákl st.', 1],
+ ['František Kovářík', 'Jan Kuželka', 1],
+ ['Jára Kohout', 'Miroslav Vladyka', 1],
+ ['Jára Kohout', 'Roman Skamene', 2],
+ ['Jára Kohout', 'Luděk Sobota', 2],
+ ['Jára Kohout', 'Jiří Lábus', 1],
+ ['Vladimír Hlavatý', 'Iva Janžurová', 7],
+ ['Vladimír Hlavatý', 'Zdeněk Dušek', 1],
+ ['Vladimír Hlavatý', 'Miroslav Vladyka', 1],
+ ['Vladimír Hlavatý', 'Roman Skamene', 4],
+ ['Vladimír Hlavatý', 'Daniela Kolářová', 1],
+ ['Vladimír Hlavatý', 'Luděk Sobota', 1],
+ ['Vladimír Hlavatý', 'Petr Jákl st.', 4],
+ ['Vladimír Hlavatý', 'Jan Kuželka', 8],
+ ['Vladimír Hlavatý', 'Jiří Lábus', 3],
+ ['Vladimír Hlavatý', 'Daniela Vacková', 2],
+ ['L. H. Struna', 'Iva Janžurová', 1],
+ ['L. H. Struna', 'Zdeněk Dušek', 1],
+ ['L. H. Struna', 'Roman Skamene', 1],
+ ['L. H. Struna', 'Jan Kuželka', 1],
+ ['Jaroslav Marvan', 'Iva Janžurová', 1],
+ ['Jaroslav Marvan', 'Daniela Kolářová', 1],
+ ['Jaroslav Marvan', 'Petr Jákl st.', 2],
+ ['Darja Hajská', 'Iva Janžurová', 7],
+ ['Darja Hajská', 'Zdeněk Dušek', 1],
+ ['Darja Hajská', 'Miroslav Vladyka', 1],
+ ['Darja Hajská', 'Roman Skamene', 2],
+ ['Darja Hajská', 'Luděk Sobota', 2],
+ ['Darja Hajská', 'Jan Kuželka', 1],
+ ['Darja Hajská', 'Jiří Lábus', 1],
+ ['Darja Hajská', 'Daniela Vacková', 1],
+ ['Ela Poznerová', 'Iva Janžurová', 1],
+ ['Ela Poznerová', 'Roman Skamene', 1],
+ ['Ela Poznerová', 'Daniela Kolářová', 1],
+ ['Gabriela Bártlová-Buddeusová', 'Iva Janžurová', 3],
+ ['Gabriela Bártlová-Buddeusová', 'Miroslav Vladyka', 1],
+ ['Gabriela Bártlová-Buddeusová', 'Petr Jákl st.', 1],
+ ['Gabriela Bártlová-Buddeusová', 'Jan Kuželka', 1],
+ ['Gabriela Bártlová-Buddeusová', 'Jiří Lábus', 1],
+ ['Ela Šárková', 'Zdeněk Dušek', 1],
+ ['Ela Šárková', 'Roman Skamene', 2],
+ ['Ela Šárková', 'Daniela Kolářová', 1],
+ ['Ela Šárková', 'Luděk Sobota', 1],
+ ['Ela Šárková', 'Jan Kuželka', 4],
+ ['Ela Šárková', 'Jiří Lábus', 2],
+ ['Ela Šárková', 'Daniela Vacková', 1]],
+ type: 'sankey',
+  name: 'společných filmů',
+}]
+
+});
+
+    </script>
+
+</body>
+</html>
