@@ -15,7 +15,7 @@ Doplnění těchto údajů dále probíhá ze sekundárních zdrojů. Těmi jsou
 
 ## Další praktické informace
 
-Data byla naposledy oscrapována 27. 5. 2023.
+Data byla naposledy oscrapována na přelomu ledna a února 2024.
 
 ***Pozor***: Oscrapované a pročištěné dataframy nejsou ekvivalentní k originální databázi Filmového přehledu, a to z několika důvodů:
 
