@@ -9,3 +9,4 @@ herectvo_raw.json
 private
 apikey.txt
 persony_raw.json
+*.pyc
